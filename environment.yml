@@ -1,0 +1,43 @@
+# Conda environment specification for the Mannich asymmetric organocatalysis dataset.
+# Reproduces the toolchain used for generating SDF files, validating the dataset,
+# and producing the figures.
+#
+# Usage:
+#   conda env create -f environment.yml
+#   conda activate mannich-dataset
+#
+# Faster alternative (recommended):
+#   mamba env create -f environment.yml
+#   conda activate mannich-dataset
+#
+# Tested on macOS (arm64). Pinned versions reflect the actual toolchain used.
+
+name: mannich-dataset
+
+channels:
+  - conda-forge
+
+dependencies:
+  # --- core language ---
+  - python=3.11.11
+
+  # --- tabular data ---
+  - pandas=2.3.3
+  - openpyxl=3.1.5            # read/write .xlsx (pandas Excel I/O)
+
+  # --- file I/O and validation helpers ---
+  - pyyaml=6.0.3
+  - tqdm=4.67.2
+
+  # --- plotting (figures) ---
+  - matplotlib-base=3.10.7    # ee histograms, coverage plots
+  - seaborn=0.13.2            # categorical breakdowns by catalyst class
+
+  # --- interactive exploration ---
+  - ipykernel=6.31.0          # run the notebooks as a Jupyter kernel
+
+  # --- installed via pip in the reference environment ---
+  - pip=25.3
+  - pip:
+      - rdkit==2025.9.6        # canonical SMILES, V3000 Molfile, 3D embedding -> SDF
+      - numpy==1.26.4
