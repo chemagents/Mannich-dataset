@@ -6,9 +6,9 @@ This repository accompanies the paper *"A curated comprehensive dataset of asymm
 
 Asymmetric organocatalytic Mannich reactions are a cornerstone method for the stereoselective construction of C–C bonds and nitrogen-containing stereocenters. Despite the large body of literature, reaction data remain scattered across publications in heterogeneous formats, which limits their reuse for data-driven and machine-learning studies.
 
-This dataset addresses that gap. It contains **3,582 asymmetric organocatalytic Mannich reactions** collected from **132 primary publications** and **manually curated** — structures, conditions, and stereochemical outcomes were verified against the original sources rather than automatically extracted. Each entry includes the reaction components as SMILES, the catalyst and its class, reaction conditions, and the reported stereochemical outcome (*ee*, and where available, *dr*). The dataset comprises 434 unique organocatalysts, 510 unique nucleophiles, and 555 unique electrophiles (imines).
+This dataset addresses that gap. It contains **4,015 asymmetric organocatalytic Mannich reactions** collected from **154 primary publications** and **manually curated** — structures, conditions, and stereochemical outcomes were verified against the original sources rather than automatically extracted. Each entry includes the reaction components as SMILES, the catalyst and its class, reaction conditions, and the reported stereochemical outcome (*ee*, and where available, *dr*). The dataset comprises 468 unique organocatalysts, 538 unique nucleophiles, and 578 unique electrophiles (imines).
 
-> **Note.** The number of unique organocatalyst SMILES may be smaller than 434: atropisomeric BINOL-derived catalysts can share an identical SMILES string (since standard SMILES does not encode axial chirality) while representing distinct catalysts that differ only in the `axial_configuration` column (*R* or *S*). Such cases are counted as separate organocatalysts.
+> **Note.** The number of unique organocatalyst SMILES may be smaller than 468: atropisomeric BINOL-derived catalysts can share an identical SMILES string (since standard SMILES does not encode axial chirality) while representing distinct catalysts that differ only in the `axial_configuration` column (*R* or *S*). Such cases are counted as separate organocatalysts.
 
 The dataset is intended as a reusable, machine-readable foundation for enantioselectivity prediction, and broader cheminformatics work on organocatalysis.
 
@@ -51,7 +51,7 @@ The dataset is provided in `mannich_dataset/` as `mannich_dataset.csv` (UTF-8). 
 
 The `scripts/` folder contains the Jupyter notebooks used to generate the catalyst structures and the figures in the paper:
 
-- `scripts/generate_catalysts_sdfs.ipynb` — generates the 3D organocatalyst structures from the catalyst SMILES and axial configuration; the resulting SDF files are written to `mannich_dataset/organocatalysts_sdfs/`.
+- `scripts/generate_catalysts_sdfs.ipynb` — generates the 3D organocatalyst structures from the catalyst SMILES and axial configuration; the resulting SDF files are written to `mannich_dataset/organocatalysts_sdfs.zip/`.
 - `scripts/figures/` — notebooks that reproduce the figures reported in the paper (`figure_02.ipynb`–`figure_06.ipynb`), one notebook per figure.
 
 ## Citation
