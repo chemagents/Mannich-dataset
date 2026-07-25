@@ -25,7 +25,7 @@ The dataset is provided in `mannich_dataset/` as `mannich_dataset.csv` (UTF-8). 
 | `axial_configuration` | Axial chirality descriptor (*R* or *S*) for atropisomeric (e.g. BINOL-type) catalysts, recorded separately because standard SMILES `@`/`@@` encodes only point chirality |
 | `organocatalyst_3d_sdf` | Name of the SDF file containing the 3D structure of the organocatalyst |
 | `organocatalyst_class` | Catalyst class |
-| `organocatalyst_concentration(mol%)` | Catalyst loading (mol %) |
+| `organocatalyst_concentration(mol%)` | Catalyst loading (mol % relative to the limiting reagent) |
 | `product` | Reaction product (SMILES) |
 | `ee` | Enantiomeric excess (%) |
 | `ddG_kcal_mol` | Absolute free-energy difference \|ΔΔG‡\| derived from *ee* (kcal/mol); magnitude only, sign not assigned |
@@ -36,11 +36,11 @@ The dataset is provided in `mannich_dataset/` as `mannich_dataset.csv` (UTF-8). 
 | `temperature` | Reaction temperature (°C) |
 | `time` | Reaction time (h) |
 | `acid_additive` | Acidic additive, if used |
-| `acid_additive_concentration(mol%)` | Loading of the acidic additive (mol %) |
+| `acid_additive_concentration(mol%)` | Loading of the acidic additive (mol % relative to the limiting reagent) |
 | `base_additive` | Basic additive, if used |
-| `base_additive_concentration(mol%)` | Loading of the basic additive (mol %) |
+| `base_additive_concentration(mol%)` | Loading of the basic additive (mol % relative to the limiting reagent) |
 | `additive` | Other additive, if used |
-| `additive_concentration(mol%)` | Loading of the other additive (mol %) |
+| `additive_concentration(mol%)` | Loading of the other additive (mol % relative to the limiting reagent) |
 | `water_additive_equiv` | Added water, in equivalents |
 | `electrophile/nucleophile` | Molar ratio of electrophile to nucleophile |
 | `two_or_three_components` | Whether the reaction is run as a two- or three-component variant (preformed imine vs. in situ from amine + carbonyl), encoded as `0` = two-component and `1` = three-component |
