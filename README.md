@@ -44,6 +44,7 @@ The dataset is provided in `mannich_dataset/` as `mannich_dataset.csv` (UTF-8). 
 | `water_additive_equiv` | Added water, in equivalents |
 | `electrophile/nucleophile` | Molar ratio of electrophile to nucleophile |
 | `two_or_three_components` | Whether the reaction is run as a two- or three-component variant (preformed imine vs. in situ from amine + carbonyl), encoded as `0` = two-component and `1` = three-component |
+| `molecular_sieves` | Presence of molecular sieves, encoded as `1` = present and `0` = absent |
 
 **Note on stereochemistry.** Tetrahedral stereocenters are encoded with standard SMILES `@`/`@@` notation. Axial chirality of atropisomeric (BINOL-type) catalysts cannot be captured this way and is therefore recorded explicitly in the `axial_configuration` column as a flag (`R`, `S`, or `none`); the corresponding three-dimensional structure is provided as an SDF file whose name is given in the `organocatalyst_3d_sdf` column.
 
