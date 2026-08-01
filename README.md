@@ -53,7 +53,7 @@ The dataset is provided in `mannich_dataset/` as `mannich_dataset.csv` (UTF-8). 
 The `scripts/` folder contains the Jupyter notebooks used to generate the catalyst structures and the figures in the paper:
 
 - `scripts/generate_catalysts_sdfs.ipynb` — generates the 3D organocatalyst structures from the catalyst SMILES and axial configuration; the resulting SDF files are written to `mannich_dataset/organocatalysts_sdfs.zip/`.
-- `scripts/figures/` — notebooks that reproduce the figures reported in the paper (`figure_02.ipynb`–`figure_04.ipynb`, `figure_06.ipynb`, `figure_04.ipynb`), one notebook per figure.
+- `scripts/figures/` — notebooks that reproduce the figures reported in the paper (`figure_02.ipynb`–`figure_04.ipynb`, `figure_06.ipynb`, `figure_07.ipynb`), one notebook per figure.
 
 ## Citation
 
